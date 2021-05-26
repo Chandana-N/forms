@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+           
+            overflow: auto;
+            width: 30%;
+            /* to set the page in middle*/
+            margin: auto;
+        }
+        label{
+            float: left;
+        }
+        input{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!----if i give auto complete on it shows old data-->
+    <form autocomplete="on">
+
+        <h1>Fields without label</h1>
+        <!-------input for box-->
+        First Name : <input><br><br>
+        Last Name : <input>
+        <h1>Fields with label</h1>
+        <fieldset>
+            <legend>User Detail</legend>
+        <!-----for and id name should be same(it can be anything)-->
+        <label for="fname">First Name : </label>
+        <input type="text" id="fname" name="lname" required placeholder="enter Fisrt name" value="Chandana" maxlength="4" size="30"><br><br>
+        <label for="lname">Last name : </label>
+        <input type="text" id="lname"name="lname" required value="N" readonly><br><br>
+        
+        <label for="uname">User Name</label>
+        <input type="text" id="uname" name="Uname" disabled><br><br>
+        <label for="pass">Password : </label>
+        <input type="password" id="pass" name="pwd"><br><br>
+        <label for="cpass">Confirm Password: </label>
+        <input type="password" id="cpass" name="cp"><br><br>
+        <label for="gen">Gender : </label>
+        <!----name value should be same otherwise both will get selected---->
+        <input type="radio" name="gender1" style="float:none" checked>female
+        <input type="radio" name="gender1" style="float:none">male<br><br>
+        <label for="yop">Year Of Passout : </label>
+        <input type="number" id="yop" name="yop" min="2017" max="2020"><br><br>
+        <label for="quali">Qualification : </label>
+        <!--------dropdown tag-->
+        <select name="edu" id="quali">
+            <option value="space">----</option>
+            <option value="Bca">Bca</option>
+            <option value="Mca">Mca</option>
+            <!----------selected-->
+            <option value="BE" selected>BE</option>
+            <option value="ME">ME</option>
+            
+        </select><br><br>
+        <label>Place : </label>
+        <input list="place">
+        <datalist id="place">
+            <option value="ckm">chikmagalore</option>
+            <option value="agumbe">agumbe</option>
+            <option value="tthl">teerthalli</option>
+        </datalist><br><br>
+        <label style="float: none;">Subject</label><br>
+        <input type="checkbox" name="sub1" style="float:none" checked> java<br>
+        <input type="checkbox" name="sub2" style="float:none"> j2ee<br>
+        <input type="checkbox" name="sub3" style="float:none"> html<br>
+        <input type="checkbox" name="sub4" style="float:none"> css<br><br>
+        <label for="number" >Number : </label>
+        <input type="number" min="0" max="100" step="10"><br><br>
+        <input type="file" multiple><br><br>
+        <input type="submit"><br><br>
+        <input type="reset">
+    </fieldset>  
+       
+    </form>
+</body>
+</html>
